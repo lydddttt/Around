@@ -11,7 +11,9 @@ import (
 	  "reflect"
 	  "github.com/pborman/uuid"
 	  "context"
+	  "io"
       "cloud.google.com/go/storage"
+	  //"golang.org/x/net/context"
 
 )
 const (
@@ -35,7 +37,8 @@ type Post struct {
       // `json:"user"` is for the json parsing of this User field. Otherwise, by default it's 'User'.
       User     string `json:"user"`
       Message  string  `json:"message"`
-      Location Location `json:"location"`
+	  Location Location `json:"location"`
+	  Url    string `json:"url"`
 }
 
 func main() {
