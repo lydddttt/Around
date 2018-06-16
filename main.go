@@ -163,7 +163,7 @@ func handlerPost(w http.ResponseWriter, r *http.Request) {
 	p.Url = attrs.MediaLink
 
 	// Save to ES.
-	saveToES(p, id)
+	//saveToES(p, id)
 
 	// Save to BigTable.
 	saveToBigTable(p, id)
